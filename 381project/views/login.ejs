@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="loginHeader">
+            <h1>Find Person App</h1>
+            <p>381Project-Group39</p>
+        </div>
+        <div class="loginBody">
+            <form action="/login" method="post">
+                <div class="loginInputsContainer">
+                    <div class="ErrorContainer">
+                        <!---show error--->
+                        <% if (error) { %>
+                        <%= error%>
+                        <% } %>
+                    </div>
+                    <label for="">Username</label>
+                    <input placeholder="username" type="text" name="name">
+                </div>
+                <div class="loginInputsContainer">
+                    <label for="">Password</label>
+                    <input placeholder="password" type="password" name="password">
+                </div>
+                <div class="loginButtonContainer">
+                    <button type="submit" value="Login">Login</button>
+            </form>
+                    <button value="Register"><a href='/register' style="text-decoration: none;color: black;">SignUp</a></button>
+        </div>
+        </form>          
+    </div>
+    <div class="loginButtonContainer2">
+    <button value="ViewMap"><a href='/map' style="text-decoration: none;color: black;">View Request</a></button>
+    </div>
+    </div>
+</body>
+
+</html>
