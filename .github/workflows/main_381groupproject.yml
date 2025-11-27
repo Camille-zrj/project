@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - 381project
+name: Build and deploy Node.js app to Azure Web App - 381groupproject
 
 on:
   push:
@@ -60,7 +60,7 @@ jobs:
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - 381project
+name: Build and deploy Node.js app to Azure Web App - 381groupproject
 
 on:
   push:
@@ -124,7 +124,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: '381project'
+          app-name: '381groupproject'
           slot-name: 'Production'
           package: .
            }}
@@ -135,8 +135,9 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: '381project'
+          app-name: '381groupproject'
           slot-name: 'Production'
           package: .
           
+
 
