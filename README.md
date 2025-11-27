@@ -41,7 +41,7 @@ not exist, the password is incorrect or something else.<p>
 ### models
 Includes account.js and request.js.
 ## Cloud-based Server URL:
-### https://381project-group39.azurewebsites.net/
+### https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net
 ## Operation Guides:
 ### Guest functions:
 1. Create request as guest. (check the username in create request page)
@@ -99,31 +99,31 @@ cannot enjoy some of the services.<p>
 Format:<br>
 curl -X POST -H "Content-Type: application/json" --data '{"name":"name", 
 "num":"contact", "age":"age", "date":"date", "lat":"latitude", "lng":"longitude", 
-"com": "some text"}' https://381project.azurewebsites.net/api/postcode/your_postcode<p>
+"com": "some text"}' https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/your_postcode<p>
 Example:<br>
 curl -X POST -H "Content-Type: application/json" --data '{"name":"test", 
 "num":"10000000", "age":"3", "date":"00:00 1/1/2023","lat":"22.31971350566492", 
-"lng":"114.1742751002312", "com": "oldtext"}' https://381project.azurewebsites.net/api/postcode/test123<br>
+"lng":"114.1742751002312", "com": "oldtext"}' https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/test123<br>
 ### Read:
 format:<br>
-curl -X GET  https://381project.azurewebsites.net/api/postcode/your_postcode<p>
+curl -X GET  https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/your_postcode<p>
 example:<br>
-curl -X GET https://381project.azurewebsites.net/api/postcode/test123<br>
+curl -X GET https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/test123<br>
 ### Update:
 format:<br>
 curl -X PUT -H "Content-Type: application/json" --data '{"name":"newname", 
 "num":"newcontact", "age":"newage", "lat":"newlatitude", "lng":"newlongitude", 
-"com": "newtext"}' https://381project.azurewebsites.net/api/postcode/your_postcode<p>
+"com": "newtext"}' https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/your_postcode<p>
 example:<br>
 curl -X PUT -H "Content-Type: application/json" --data '{"name":"test12345", 
 "num":"31202589", "age":"5", "lat":"22.315956834256337", 
 "lng":"114.17828500270844", "date":"00:00 1/1/2024", "com": "newtext"}' 
-https://381project.azurewebsites.net/api/postcode/test123<br>
+https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/test123<br>
 ### Delete:
 Format:<br>
-curl -X DELETE https://381project.azurewebsites.net/api/postcode/your_postcode<p>
+curl -X DELETE https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/your_postcode<p>
 Example:<br>
-curl -X DELETE https://381project.azurewebsites.net/api/postcode/test123<p>
+curl -X DELETE https://381groupproject-ckbchmcvgsapbnbs.southafricanorth-01.azurewebsites.net/api/postcode/test123<p>
 <br>
 
 https://github.com/Camille-zrj/381project
