@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Edit Student</h1>
+        <div class="user-info">
+            Welcome, <strong><%= user.name %></strong>
+            <a href="/students/<%= student._id %>" class="btn-back">Back to Details</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <form action="/students/<%= student._id %>/update" method="POST">
+            <div class="form-group">
+                <label>Student ID:</label>
+                <input type="text" name="studentId" value="<%= student.studentId %>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="name" value="<%= student.name %>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" value="<%= student.email %>" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="text" name="phone" value="<%= student.phone %>">
+            </div>
+            
+            <div class="form-group">
+                <label>Course:</label>
+                <select name="course">
+                    <option value="COMP S381F" <%= student.course === 'COMP S381F' ? 'selected' : '' %>>COMP S381F</option>
+                    <option value="COMP S381W" <%= student.course === 'COMP S381W' ? 'selected' : '' %>>COMP S381W</option>
+                    <option value="Other" <%= student.course === 'Other' ? 'selected' : '' %>>Other</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-submit">Update Student</button>
+            <a href="/students/<%= student._id %>" class="btn-cancel">Cancel</a>
+        </form>
+    </main>
+</body>
+</html>

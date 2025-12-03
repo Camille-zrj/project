@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Student</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Student</h1>
+        <div class="user-info">
+            Welcome, <strong><%= user.name %></strong>
+            <a href="/students" class="btn-back">Back to List</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <form action="/students/create" method="POST">
+            <div class="form-group">
+                <label>Student ID:</label>
+                <input type="text" name="studentId" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="text" name="phone">
+            </div>
+            
+            <div class="form-group">
+                <label>Course:</label>
+                <select name="course">
+                    <option value="COMP S381F">COMP S381F</option>
+                    <option value="COMP S381W">COMP S381W</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn-submit">Create Student</button>
+            <a href="/students" class="btn-cancel">Cancel</a>
+        </form>
+    </main>
+</body>
+</html>

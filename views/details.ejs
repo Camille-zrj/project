@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Details</h1>
+        <div class="user-info">
+            Welcome, <strong><%= user.name %></strong>
+            <a href="/students" class="btn-back">Back to List</a>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="student-details">
+            <h2><%= student.name %></h2>
+            <p><strong>Student ID:</strong> <%= student.studentId %></p>
+            <p><strong>Email:</strong> <%= student.email %></p>
+            <p><strong>Phone:</strong> <%= student.phone %></p>
+            <p><strong>Course:</strong> <%= student.course %></p>
+            <p><strong>Created:</strong> <%= student.createdAt ? student.createdAt.toLocaleString() : 'N/A' %></p>
+            
+            <div class="action-buttons" style="margin-top: 20px;">
+                <a href="/students/<%= student._id %>/edit" class="btn-edit">Edit Student</a>
+                <a href="/students/<%= student._id %>/delete" 
+                   onclick="return confirm('Delete this student?')" 
+                   class="btn-delete">Delete Student</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
