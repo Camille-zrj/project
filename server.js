@@ -137,6 +137,48 @@ app.get('/students/:id/delete', isLoggedIn, async (req, res) => {
 });
 
 // RESTFUL APIs
+// GET all students
+app.get('/api/students', async (req, res) => {
+  try {
+    await client.connect();
+    const db = client.db(dbName);
+    const students = await db.collection(studentCollection).find().toArray();
+    res.json({
+      success: true,
+      count: students.length,
+      data: students
+    });
+  } catch (error) {
+    console.error('Error fetching students:', error);
+    res.status(500).json({ success: false, error: 'Failed to fetch students' });
+  }
+});
+
+// GET single student by ID
+app.get('/api/students/:id', async (req, res) => {
+  try {
+    await client.connect();
+    const db = client.db(dbName);
+    
+    // Check if ID is valid ObjectId
+    if (!ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ success: false, error: 'Invalid student ID format' });
+    }
+    
+    const student = await db.collection(studentCollection).findOne({ 
+      _id: new ObjectId(req.params.id) 
+    });
+    
+    if (student) {
+      res.json({ success: true, data: student });
+    } else {
+      res.status(404).json({ success: false, error: 'Student not found' });
+    }
+  } catch (error) {
+    console.error('Error fetching student:', error);
+    res.status(500).json({ success: false, error: 'Failed to fetch student' });
+  }
+});
 // CREATE
 app.post('/api/students', async (req, res) => {
   await client.connect();
