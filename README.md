@@ -54,11 +54,14 @@ https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net
 
 -Create:Click "Add New Student" button → Fill form → Click "Create Student" button<br>
 You'll be redirected back to the dashboard with the new student added.<br>
+
 -Read:Students list displays automatically after login.<br>
 View Details: Click "View" button next to any student to see complete details.<br>
+
 -Update:Click "Edit" button next to any student → Modify → Click "Update Student" button<br>
 You'll be redirected back to the student details page.<br>
-Delete: Click "Delete" next to any student → Confirm<br>
+
+-Delete: Click "Delete" next to any student → Confirm<br>
 The student will be removed from the system.<p>
 
 ### RESTful APIs
