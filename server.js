@@ -259,6 +259,17 @@ app.delete('/api/students/:id', async (req, res) => {
   });
 });
 
+app.get('/api/test', (req, res) => {
+  res.json({
+    success: true,
+    message: 'API is working!',
+    endpoints: {
+      get_all_students: 'GET /api/students',
+      get_student: 'GET /api/students/:id',
+      create_student: 'POST /api/students',
+      update_student: 'PUT /api/students/:id',
+      delete_student: 'DELETE /api/students/:id'
+    }
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, async () => {
