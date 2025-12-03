@@ -39,7 +39,7 @@ User.js: User model for authentication (using MongoDB directly)
 ###https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net
 
 ## Operation Guide
-###1. Login/Logout
+###Login/Logout
 - Visit the root URL or '/login'<br>
 - Use credentials: Username: 'admin', Password: 'admin123'<br>
 - After login, you'll be redirected to the students list<br>
@@ -50,7 +50,8 @@ User.js: User model for authentication (using MongoDB directly)
 2. Enter the username and password
 3. Click the Login button
 
-###2. CRUD Web Pages
+###CRUD Web Pages
+
 -Create:Click "Add New Student" button → Fill form → Click "Create Student" button<br>
 You'll be redirected back to the dashboard with the new student added.<br>
 -Read:Students list displays automatically after login.<br>
@@ -60,26 +61,27 @@ You'll be redirected back to the student details page.<br>
 Delete: Click "Delete" next to any student → Confirm<br>
 The student will be removed from the system.<p>
 
-###3. RESTful APIs
-##Create:
+###RESTful APIs
+
+###Create:
 Format:<br>
 curl -X POST -F “studentId=studentId” -F "name=name" -F "email=email address" -F "phone=phone number" -F "course=course" https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students<p>
 Example:<br>
 curl -X POST -F “studentId=12345678” -F "name=John Doe" -F email=john@example.com -F "phone=12345678" -F "course=COMP S381F" https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students<br>
 
-##Read:
+###Read:
 format:<br>
 curl -X GET https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students/STUDENT_OBJECT_ID<p>
 example:<br>
 curl -X GET https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students/6930100219ebc1c94d887364<br>
 
-##Update:
+###Update:
 format:<br>
 curl -X PUT -F "name=John Updated" -F "email=john.new@example.com" https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students/STUDENT_OBJECT_ID<p>
 example:<br>
 curl -X PUT -F "name=John Updated" -F "email=john.new@example.com" https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students/6930100219ebc1c94d887364<br>
 
-##Delete:
+###Delete:
 Format:<br>
 curl -X DELETE  https://system-a2htgmckdpbneegk.southafricanorth-01.azurewebsites.net/api/students/STUDENT_OBJECT_ID<p>
 Example:<br>
