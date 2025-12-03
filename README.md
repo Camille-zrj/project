@@ -1,4 +1,4 @@
-# project info
+# Project info
 Projectname: Student Management System
 Student Name: ZHOU Ruijin 
 SID: 13032809
